@@ -2,12 +2,12 @@
 
 import Reveal from "./Reveal";
 import {
+  Brain,
   Compass,
   Sparkles,
   HeartHandshake,
-  Brain,
-  BatteryLow,
-  SunMedium,
+  Heart,
+  Feather,
 } from "lucide-react";
 
 interface AreaItem {
@@ -19,39 +19,39 @@ interface AreaItem {
 const areas: AreaItem[] = [
   {
     icon: Brain,
-    title: "Ansiedade e Angústia",
+    title: "Ansiedade e angústia",
     description:
-      "Quando os pensamentos se aceleram, o peito aperta e a rotina parece pesada demais para carregar sozinho.",
+      "Quando algo dentro de você parece pedir atenção, seja pela preocupação, pelo excesso de pensamentos, pela sensação de inquietação ou por sentimentos que nem sempre são fáceis de compreender.",
   },
   {
     icon: Compass,
-    title: "Transições de Vida",
+    title: "Transições de vida",
     description:
-      "Mudanças de carreira, términos de ciclos, mudanças de cidade e fases que exigem reconstruir caminhos.",
+      "Mudanças e períodos de passagem, como tornar-se adulto, iniciar ou encerrar ciclos, mudar de caminhos e se adaptar ao novo.",
   },
   {
     icon: Sparkles,
-    title: "Autoconhecimento & Autoestima",
+    title: "Autoconhecimento e autopercepção",
     description:
-      "Reconectar-se com a sua essência para além das expectativas alheias, acolhendo sua própria história.",
+      "Um espaço para compreender melhor o que você sente, deseja, precisa e os sentidos que tem construído para sua própria história.",
   },
   {
     icon: HeartHandshake,
-    title: "Relações e Vínculos",
+    title: "Vínculos e relacionamentos",
     description:
-      "Construção de limites saudáveis, comunicação mais sincera e compreensão dos padrões nos seus relacionamentos.",
+      "Conflitos, ciúmes e possibilidades de construir relações mais saudáveis e significativas, compreendendo diferentes modos de se relacionar consigo e com o outro.",
   },
   {
-    icon: BatteryLow,
-    title: "Sobrecarga e Esgotamento",
+    icon: Heart,
+    title: "Autoestima e autoimagem",
     description:
-      "A sensação constante de dar conta de tudo e se deixar em último lugar. Um espaço para reencontrar o próprio ritmo.",
+      "A relação que você constrói consigo, com seu corpo, suas escolhas e a forma como se percebe.",
   },
   {
-    icon: SunMedium,
-    title: "Luto e Processos de Perda",
+    icon: Feather,
+    title: "Perdas e lutos",
     description:
-      "Acolhimento da dor de perder alguém querido, um projeto significativo ou fases importantes da vida.",
+      "Atravessar despedidas, rupturas e diferentes experiências de perda, incluindo aquelas que nem sempre são reconhecidas como luto.",
   },
 ];
 
@@ -62,8 +62,8 @@ export default function AreasDeCuidado() {
         <div className="section-header">
           <h2>O que podemos trabalhar em sessão</h2>
           <p className="section-subtitle">
-            Cada pessoa traz uma história única. Abaixo estão algumas das
-            questões mais presentes nos atendimentos:
+            A psicoterapia pode ser um espaço para olhar com mais cuidado para
+            diferentes questões e momentos da vida, como:
           </p>
         </div>
 

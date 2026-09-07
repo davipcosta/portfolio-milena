@@ -53,23 +53,21 @@ export default function Home() {
         <div className="wrap">
           <div>
             <h1 className="hero-enter" style={{ animationDelay: "0.08s" }}>
-              Uma <span className="em-accent">pausa</span>, antes de
-              continuar.
+              Um espaço para <span className="em-accent">ser, sentir,</span> e <span className="em-accent">se conhecer</span>
             </h1>
             <p
               className="hero-lede hero-enter"
               style={{ animationDelay: "0.22s" }}
             >
-              Atendimento psicológico individual para adultos, com escuta,
-              presença e vínculo. Presencial em Belém ou online, onde for
-              melhor para você.
+              Atendimento psicológico individual para jovens adultos, adultos e idosos, com escuta, presença e vínculo.
+              Atendimentos presenciais em Belém (PA) e online para todo o mundo.
             </p>
             <div
               className="hero-actions hero-enter"
               style={{ animationDelay: "0.35s" }}
             >
               <a className="btn-primary" href={WHATSAPP_LINK} target="_blank">
-                Agendar conversa
+                Agendar sessão
               </a>
             </div>
           </div>
@@ -112,16 +110,13 @@ export default function Home() {
           <div>
             <h2>Sobre mim</h2>
             <p className="sobre-bio">
-              Sou psicóloga de abordagem humanista — acredito numa terapia
-              feita de escuta, presença e vínculo, onde você pode chegar
-              inteiro, com suas dúvidas e contradições, e sair um pouco mais
-              perto de si mesmo.
+              Minha trajetória de formação inclui pós-graduação em Psicologia da Saúde e em Psicologia Jurídica, além de formação
+              em Abordagem Centrada na Pessoa (ACP). Atualmente, sou mestranda em Psicologia pela Universidade Federal do Pará (UFPA)
+              e realizo Especialização em Sexologia e Sexualidade Humana.
             </p>
             <p className="sobre-bio">
-              Sou mestranda em Psicologia pela UFPA e atendo em Belém (PA) e
-              online, construindo junto com cada pessoa caminhos possíveis
-              para lidar com ansiedade, relacionamentos, autoconhecimento e
-              momentos de transição de vida.
+              Atuo como psicóloga clínica, com base humanista. Acredito em uma psicoterapia construída a partir da escuta,
+              da presença e do vínculo, respeitando a singularidade de cada pessoa e o seu próprio processo.
             </p>
             <p className="crp">CRP 10/10986 · Belém, Pará</p>
           </div>
@@ -139,8 +134,8 @@ export default function Home() {
           <div>
             <h2>Vamos conversar?</h2>
             <p className="contato-lede">
-              Me chama no WhatsApp para tirar dúvidas ou agendar sua primeira
-              sessão. Costumo responder em até um dia útil.
+              Se você sente que este pode ser um espaço para você, me chama no WhatsApp. 
+              Podemos conversar, tirar suas dúvidas e entender juntos as possibilidades de iniciar um processo terapêutico.
             </p>
             <div className="contato-actions">
               <a className="btn-primary" href={WHATSAPP_LINK} target="_blank">
@@ -151,7 +146,7 @@ export default function Home() {
           <div className="contato-info">
             <div>
               <div className="contato-info-label">Atendimento</div>
-              <div>Segunda a sexta, 9h às 18h</div>
+              <div>Segunda a sábado, com horários a combinar.</div>
             </div>
             <div>
               <div className="contato-info-label">Local</div>

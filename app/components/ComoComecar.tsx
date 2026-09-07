@@ -16,21 +16,21 @@ const steps: StepItem[] = [
     icon: MessageCircle,
     title: "Primeiro contato",
     description:
-      "Você me envia uma mensagem no WhatsApp. É uma conversa inicial sem compromisso para tirar dúvidas, saber sobre horários disponíveis e entender se faz sentido para você.",
+      "Você pode entrar em contato pelo WhatsApp para tirar suas dúvidas e conhecermos um pouco melhor sobre o que você busca. Nesse primeiro contato, também envio meu portfólio, com informações sobre as modalidades de atendimento, valores, funcionamento e localização.",
   },
   {
     number: "02",
     icon: CalendarDays,
-    title: "Alinhamento de horários",
+    title: "Alinhamento",
     description:
-      "Definimos o formato mais conveniente, presencial em Belém (PA) ou online por videochamada, e escolhemos um horário que se encaixe na sua rotina semanal.",
+      "Conversamos sobre a modalidade de atendimento e definimos um agendamento que faça sentido na sua rotina para o início do processo terapêutico.",
   },
   {
     number: "03",
     icon: HeartHandshake,
-    title: "Primeira sessão de acolhimento",
+    title: "Início do processo",
     description:
-      "Nosso primeiro encontro de 50 minutos. Um espaço seguro e sem julgamentos para você chegar como está, sem necessidade de preparar nada com antecedência.",
+      "Na primeira sessão, teremos um momento para nos conhecermos e começarmos a construir juntos essa caminhada.",
   },
 ];
 
@@ -59,7 +59,6 @@ export default function ComoComecar() {
                 </div>
                 <h3 className="passo-title">{step.title}</h3>
                 <p className="passo-desc">{step.description}</p>
-                
               </div>
             );
           })}
