@@ -7,7 +7,7 @@ import FAQ from "./components/FAQ";
 
 const WHATSAPP_NUMBER = "559191640888";
 const WHATSAPP_MSG = encodeURIComponent(
-  "Olá, Milena! Gostaria de agendar uma conversa."
+  "Oie Milena! Gostaria de mais informações sobre a psicoterapia ☺️"
 );
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MSG}`;
 
