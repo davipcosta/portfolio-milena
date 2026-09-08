@@ -27,7 +27,7 @@ export default function Home() {
               Sobre mim
             </a>
             <a href="#areas" className="nav-link">
-              O que atendo
+              Temas
             </a>
             <a href="#como-comecar" className="nav-link">
               Como começar
@@ -43,7 +43,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Agendar conversa
+            Agendar sessão
           </a>
         </div>
       </header>
