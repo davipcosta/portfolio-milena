@@ -85,15 +85,25 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/icon.svg", type: "image/svg+xml" },
       { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
     ],
-    shortcut: "/icon.svg",
-    apple: "/icon.svg",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
   verification: {
     google: "kiQ3Eit51gK5tVfT3dBcl6wm5oZ2pibefMVnJVA0WdQ",
   },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Milena Nobre",
+  jobTitle: "Psicóloga Clínica",
+  url: "https://www.psi-milena.com.br",
+  image: "https://www.psi-milena.com.br/og-image.jpg",
+  sameAs: ["https://www.instagram.com/psi.milenanobre"],
 };
 
 export default function RootLayout({
@@ -103,6 +113,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" className={`${fraunces.variable} ${inter.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body>{children}</body>
     </html>
   );
