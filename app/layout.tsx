@@ -83,14 +83,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  icons: {
-    icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon.ico", sizes: "any" },
-    ],
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
-  },
   verification: {
     google: "kiQ3Eit51gK5tVfT3dBcl6wm5oZ2pibefMVnJVA0WdQ",
   },
