@@ -72,6 +72,11 @@ export const metadata: Metadata = {
       "Atendimento psicológico individual para jovens adultos, adultos e idosos. Presencial em Belém (PA) e online. CRP 10/10986.",
     images: ["/og-image.jpg"],
   },
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
   robots: {
     index: true,
     follow: true,
