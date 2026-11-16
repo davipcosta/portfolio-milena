@@ -5,8 +5,8 @@ import "./globals.css";
 const fraunces = Fraunces({
   subsets: ["latin"],
   variable: "--font-display",
-  weight: ["400", "500", "600"],
   style: ["normal", "italic"],
+  axes: ["SOFT", "opsz"],
 });
 
 const inter = Inter({

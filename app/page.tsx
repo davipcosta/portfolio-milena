@@ -4,6 +4,8 @@ import Parallax from "./components/Parallax";
 import AreasDeCuidado from "./components/AreasDeCuidado";
 import ComoComecar from "./components/ComoComecar";
 import FAQ from "./components/FAQ";
+import SiteHeader from "./components/SiteHeader";
+import { AtSign, Clock, Link2, MapPin, MessageCircle } from "lucide-react";
 
 const WHATSAPP_NUMBER = "559191640888";
 const WHATSAPP_MSG = encodeURIComponent(
@@ -16,37 +18,7 @@ export default function Home() {
     <>
       <ScrollProgress />
 
-      <header className="nav nav-enter">
-        <div className="wrap nav-wrap">
-          <a href="#" className="nav-name">
-            Milena Nobre
-          </a>
-
-          <nav className="nav-links">
-            <a href="#sobre" className="nav-link">
-              Sobre mim
-            </a>
-            <a href="#areas" className="nav-link">
-              Temas
-            </a>
-            <a href="#como-comecar" className="nav-link">
-              Como começar
-            </a>
-            <a href="#faq" className="nav-link">
-              Dúvidas
-            </a>
-          </nav>
-
-          <a
-            className="nav-cta"
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Agendar sessão
-          </a>
-        </div>
-      </header>
+      <SiteHeader whatsappLink={WHATSAPP_LINK} />
 
       <section className="hero">
         <div className="hero-breathe-glow" aria-hidden="true" />
@@ -66,7 +38,13 @@ export default function Home() {
               className="hero-actions hero-enter"
               style={{ animationDelay: "0.35s" }}
             >
-              <a className="btn-primary" href={WHATSAPP_LINK} target="_blank">
+              <a
+                className="btn-primary"
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MessageCircle size={18} aria-hidden="true" />
                 Agendar sessão
               </a>
             </div>
@@ -77,7 +55,7 @@ export default function Home() {
           >
             <Parallax speed={0.12}>
               <div className="hero-visual-float">
-                <div className="hero-visual-offset" />
+                <div className="hero-arch-outline" aria-hidden="true" />
                 <div className="hero-visual">
                   <img
                     className="img-reveal"
@@ -93,18 +71,11 @@ export default function Home() {
 
       <section className="sobre" id="sobre">
         <Reveal className="wrap">
-          <div className="sobre-photo sobre-photo-tilt">
+          <div className="sobre-photo">
             <img
               className="img-reveal"
               src="/milena3.jpeg"
               alt="Milena Nobre"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                objectPosition: "top center",
-                borderRadius: "18px",
-              }}
             />
           </div>
           <div>
@@ -131,42 +102,63 @@ export default function Home() {
 
       <section className="contato" id="contato">
         <Reveal className="wrap">
-          <div>
-            <h2>Vamos conversar?</h2>
-            <p className="contato-lede">
-              Se você sente que este pode ser um espaço para você, me chama no WhatsApp. 
-              Podemos conversar, tirar suas dúvidas e entender juntos as possibilidades de iniciar um processo terapêutico.
-            </p>
-            <div className="contato-actions">
-              <a className="btn-primary" href={WHATSAPP_LINK} target="_blank">
-                Chamar no WhatsApp
-              </a>
+          <div className="contato-panel">
+            <div className="contato-main">
+              <h2>Vamos conversar?</h2>
+              <p className="contato-lede">
+                Se você sente que este pode ser um espaço para você, me chama no WhatsApp. 
+                Podemos conversar, tirar suas dúvidas e entender juntos as possibilidades de iniciar um processo terapêutico.
+              </p>
+              <div className="contato-actions">
+                <a
+                  className="btn-primary btn-light"
+                  href={WHATSAPP_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <MessageCircle size={18} aria-hidden="true" />
+                  Chamar no WhatsApp
+                </a>
+              </div>
             </div>
-          </div>
-          <div className="contato-info">
-            <div>
-              <div className="contato-info-label">Atendimento</div>
-              <div>Segunda a sábado, com horários a combinar.</div>
-            </div>
-            <div>
-              <div className="contato-info-label">Local</div>
-              <div>Belém, Pará — presencial ou online</div>
-            </div>
-            <div>
-              <div className="contato-info-label">Instagram</div>
-              <a
-                href="https://www.instagram.com/psi.milenanobre/"
-                target="_blank"
-              >
-                @psi.milenanobre
-              </a>
-            </div>
-            <div>
-              <div className="contato-info-label">Mais links</div>
-              <a href="https://linkme.bio/psi.milenanobre" target="_blank">
-                linkme.bio/psi.milenanobre
-              </a>
-            </div>
+            <dl className="contato-info">
+              <div className="contato-info-item">
+                <Clock size={18} className="contato-info-icon" aria-hidden="true" />
+                <dt className="contato-info-label">Atendimento</dt>
+                <dd>Segunda a sábado, com horários a combinar.</dd>
+              </div>
+              <div className="contato-info-item">
+                <MapPin size={18} className="contato-info-icon" aria-hidden="true" />
+                <dt className="contato-info-label">Local</dt>
+                <dd>Belém, Pará — presencial ou online</dd>
+              </div>
+              <div className="contato-info-item">
+                <AtSign size={18} className="contato-info-icon" aria-hidden="true" />
+                <dt className="contato-info-label">Instagram</dt>
+                <dd>
+                  <a
+                    href="https://www.instagram.com/psi.milenanobre/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @psi.milenanobre
+                  </a>
+                </dd>
+              </div>
+              <div className="contato-info-item">
+                <Link2 size={18} className="contato-info-icon" aria-hidden="true" />
+                <dt className="contato-info-label">Mais links</dt>
+                <dd>
+                  <a
+                    href="https://linkme.bio/psi.milenanobre"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    linkme.bio/psi.milenanobre
+                  </a>
+                </dd>
+              </div>
+            </dl>
           </div>
         </Reveal>
       </section>

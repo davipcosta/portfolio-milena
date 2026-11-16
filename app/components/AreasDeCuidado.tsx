@@ -58,8 +58,8 @@ const areas: AreaItem[] = [
 export default function AreasDeCuidado() {
   return (
     <section className="areas-section" id="areas">
-      <Reveal className="wrap">
-        <div className="section-header">
+      <Reveal className="wrap areas-layout">
+        <div className="section-header areas-header">
           <h2>O que podemos trabalhar em sessão</h2>
           <p className="section-subtitle">
             A psicoterapia pode ser um espaço para olhar com mais cuidado para
@@ -67,24 +67,22 @@ export default function AreasDeCuidado() {
           </p>
         </div>
 
-        <div className="areas-grid">
-          {areas.map((item, index) => {
+        <ul className="areas-list">
+          {areas.map((item) => {
             const Icon = item.icon;
             return (
-              <div
-                key={item.title}
-                className="area-card"
-                style={{ animationDelay: `${0.1 * (index + 1)}s` }}
-              >
-                <div className="area-icon-wrap">
-                  <Icon size={22} className="area-icon" />
+              <li key={item.title} className="area-item">
+                <span className="area-icon-wrap" aria-hidden="true">
+                  <Icon size={20} className="area-icon" />
+                </span>
+                <div>
+                  <h3 className="area-title">{item.title}</h3>
+                  <p className="area-desc">{item.description}</p>
                 </div>
-                <h3 className="area-title">{item.title}</h3>
-                <p className="area-desc">{item.description}</p>
-              </div>
+              </li>
             );
           })}
-        </div>
+        </ul>
       </Reveal>
     </section>
   );

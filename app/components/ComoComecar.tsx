@@ -46,23 +46,25 @@ export default function ComoComecar() {
           </p>
         </div>
 
-        <div className="passos-grid">
+        <ol className="passos-track">
           {steps.map((step) => {
             const Icon = step.icon;
             return (
-              <div key={step.number} className="passo-card">
-                <div className="passo-top">
+              <li key={step.number} className="passo">
+                <div className="passo-node">
                   <span className="passo-number">{step.number}</span>
-                  <div className="passo-icon-wrap">
-                    <Icon size={20} className="passo-icon" />
-                  </div>
                 </div>
-                <h3 className="passo-title">{step.title}</h3>
-                <p className="passo-desc">{step.description}</p>
-              </div>
+                <div className="passo-body">
+                  <h3 className="passo-title">
+                    <Icon size={18} className="passo-icon" aria-hidden="true" />
+                    {step.title}
+                  </h3>
+                  <p className="passo-desc">{step.description}</p>
+                </div>
+              </li>
             );
           })}
-        </div>
+        </ol>
       </Reveal>
     </section>
   );

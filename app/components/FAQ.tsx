@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Reveal from "./Reveal";
-import { ChevronDown } from "lucide-react";
+import { Plus } from "lucide-react";
 
 interface FAQItem {
   question: string;
@@ -56,7 +56,7 @@ export default function FAQ() {
 
   return (
     <section className="faq-section" id="faq">
-      <Reveal className="wrap">
+      <Reveal className="wrap faq-layout">
         <div className="section-header">
           <h2>Dúvidas frequentes</h2>
           <p className="section-subtitle">
@@ -78,16 +78,20 @@ export default function FAQ() {
                   className="faq-trigger"
                   onClick={() => toggleItem(index)}
                   aria-expanded={isOpen}
+                  aria-controls={`faq-panel-${index}`}
+                  id={`faq-trigger-${index}`}
                 >
                   <span className="faq-question">{faq.question}</span>
                   <span className="faq-icon-wrap">
-                    <ChevronDown
-                      size={18}
-                      className={`faq-chevron ${isOpen ? "rotate" : ""}`}
-                    />
+                    <Plus size={18} className="faq-plus" aria-hidden="true" />
                   </span>
                 </button>
-                <div className={`faq-content ${isOpen ? "open" : ""}`}>
+                <div
+                  id={`faq-panel-${index}`}
+                  role="region"
+                  aria-labelledby={`faq-trigger-${index}`}
+                  className={`faq-content ${isOpen ? "open" : ""}`}
+                >
                   <div className="faq-content-inner">
                     <p>{faq.answer}</p>
                   </div>
